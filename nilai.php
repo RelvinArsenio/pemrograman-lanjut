@@ -30,5 +30,5 @@ if ($nilai >= 80 && $nilai <= 100) {
 }
 
 // Menampilkan grade yang didapat
-echo "Grade Anda adalah: " . $grade, " Dengan Nilai: " . $nilai;
+echo "Grade Anda adalah: " . $grade . " Dengan Nilai: " . $nilai;
 ?>
