@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angka Ganjil dan Genap</title>
+</head>
+<body>
+    <?php
+    // Membuat array untuk menyimpan angka ganjil dan genap
+    $ganjil = array();
+    $genap = array();
+
+    // Mengisi array dengan angka 1 sampai 10
+    for ($i = 1; $i <= 10; $i++) {
+        // Jika angka habis dibagi 2, maka masukkan ke array genap
+        if ($i % 2 == 0) {
+            $genap[] = $i;
+        }
+        // Jika tidak, maka masukkan ke array ganjil
+        else {
+            $ganjil[] = $i;
+        }
+    }
+    ?>
+
+    <!-- Membuat tabel dengan dua kolom -->
+    <table border="1">
+        <tr>
+            <th>Ganjil</th>
+            <th>Genap</th>
+        </tr>
+
+        <!-- Menampilkan isi array di setiap baris tabel -->
+        <?php
+        $count = max(count($ganjil), count($genap));
+        for ($j = 0; $j < $count; $j++) {
+            echo "<tr>";
+            echo "<td>" . ($j < count($ganjil) ? $ganjil[$j] : "") . "</td>";
+            echo "<td>" . ($j < count($genap) ? $genap[$j] : "") . "</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+</body>
+</html>
